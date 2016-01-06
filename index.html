@@ -16,197 +16,164 @@ a { color:#000; text-decoration:underline; }
 a:hover { color:#000; text-decoration:none; border-bottom: 3px solid #327CCB; }
 a:visited { color:#000; text-decoration:none;}
 
-ul li, ol li {
-  padding:0 0 0.4em 0;
+/* STRUCTURE */
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+header {
+	height: 100px;
+	padding: 0 15px;
+}
+#content {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
 }
 
-.container {
-  max-width:1300px;
-  margin:0 auto;
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
 }
 
-.header {
-  margin:1em 1% 0 1%;
-  padding:2em 2% 1em 2%;
-  background:#fff;
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
 }
 
-.logo {
-  float:left;
-  display:inline-block;
-  font-size:18px;
-  color:#383838;
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+	header, footer {
+		padding: 1% 4%;
+	}
 }
 
-.menu_main {
-  width:50%;
-  float:right;
-  text-align:right;
-  margin:0.2em 0 0 0;
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
 }
 
-.menu_main li {
-  display:inline-block;
-  margin:0 0 0 7px;
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+
 }
 
-.menu_main li.active,
-.menu_main li.active a {
-  color:#565656;
-  text-decoration:none;
-  cursor:default;
+
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
 }
 
-.info {
-  margin:0 1%;
+#pagewrap, header, #content, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
 }
 
-.hero {
-  background:#fff;
-  margin:0 0 2em 0;
-  padding:0 0 1em 2%;
-}
-
-.hero .col_66 {
-  border-right:1px solid #cecece;
-  margin-right:1%;
-  padding-right:1%;
-}
-
-.article {
-  background:#fff;
-  padding:1.5em 0 2em 2%;
-}
-
-.footer {
-  padding:1em 2% 2em 2%;
-  color:#565656;
-  margin:0 1%;
-}
-
-.hero h1 {
-  font-size:18px;
-  color:#565656;
-}
-
-h1, h2 {
-  font-weight:normal;
-  font-size:17px;
-}
-
-h3, h4, h5, h6 {
-  font-weight:bold;
-  color:#737373;
-}
-
-h1 {
-  font-size:22px;
-}
-
-.article .col_33 h2:first-child,
-.article .col_50 h2:first-child,
-.article .col_66 h2:first-child {
-  border-bottom:1px solid #cecece;
-  padding: 0 0 0.5em;
-}
-
-.table {
-  width:100%;
-}
-.table th {
-  padding:5px 7px;
-  font-weight:normal;
-  text-align:left;
-  font-size:1.2em;
-}
-.table td {
-  padding:5px 7px;
-}
-.table tr {
-  border-bottom:1px solid #ddd;
-}
-.table tr:last-child {
-  border:0;
-}
-
-@media only screen and (max-width:480px) { /* Smartphone custom styles */
-  .hero .col_66 {
-    border-right:0;
-    margin-right:2%;
-  }
-  .header {
-    padding: 1em 2% 0;
-    margin: 3px 1% 0;
-  }
-  .hero {
-      margin: 0 0 6px;
-  }
-}
-
-@media only screen and (max-width:768px) { /* Tablet custom styles */
-  .hero .col_66 {
-    border-right:0;
-    margin-right:2%;
-  }
-}
 </style>
   <title>Alison Bruzek</title>  
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
-  <div class="container">
+<div id="pagewrap">
   
-  <header class="header">
-    <div class="logo"></div>
-      <nav class="menu_main">
-        <ul>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="info">
+  <header>
+		<h1>Alison Bruzek</h1>
+		<p>is a freelance science writer & radio producer in Boston.</p>
+    <p>I'm a fill-in producer at WBUR and have written for <i>NPR</i>, <i>The Atlantic</i> and <i>The Boston Globe</i>, among others.</p>
+    <p>I'm also on <a href="http://www.twitter.com/voteforali">Twitter</a> and I co-write an affectionately inane <a href="http://www.tinyletter.com/wowcrazyshit">newsletter</a>. Rarely, I <a href="http://www.theraptorlab.com/">blog.</a></p>
+	</header>
       
-      <article class="hero">
-        <div class="col_100">
-          <h1>Alison Bruzek</h1>
-          <p>is a freelance science writer & radio producer in Boston.</p>
-          <p>I'm a fill-in producer at WBUR and have written for <i>NPR</i>, <i>The Atlantic</i> and <i>The Boston Globe</i>, among others.</p>
-          <p>I'm also on <a href="http://www.twitter.com/voteforali">Twitter</a> and I co-write an affectionately inane <a href="http://www.tinyletter.com/wowcrazyshit">newsletter</a>. Rarely, I <a href="http://www.theraptorlab.com/">blog.</a></p>
-          </div>
-      </article>
+  <section id="content">
+		<h2>Recent Publications</h2>
+		<p><a href="http://www.atlasobscura.com/articles/here-be-fraud-a-map-of-the-worlds-best-cheats-fakes-and-flatout-lies"><b>Atlas Obscura:</b> The Map of the World's Best Cheats, Fakes, and Flat-Out Lies</a></p>
+    <p><a href="https://commonhealth.wbur.org/2015/11/flu-vaccine-no-excuses"><b>CommonHealth:</b> Sorry, Intriguing Studies Are No Excuse To Skip The Flu Shot This Year</a></p>
+    <p><a href="http://www.pbs.org/wgbh/nova/next/tech/automation-and-the-internet-of-things/"><b>NOVA Next:</b> To Automate Everything, Solve These Three Challenges</a></p>
+    <p><a href="http://abruzek.github.io/full.html">More</a></p>
+	</section>
+	
+	<section id="middle">
+		<h2>Radio</h2>
+		<p><a href="https://radioboston.wbur.org/author/abruzek"><b>WBUR:</b> Radio Boston</a></p>
+    <p><a href="http://www.npr.org/blogs/health/2014/12/03/368213774/don-t-let-technoference-ruin-your-love-life"><b>NPR:</b> Don't Let Technoference Ruin Your Love Life</a></p>
+    <p><a href="http://www.newsworks.org/index.php/thepulse/item/81086-on-a-cheese-rind-war-and-peace"><b>WHYY:</b> On A Cheese Rind, War And Peace</a></p>
+    <p><a href="http://abruzek.github.io/full.html">More</a></p>
+  </section>
 
-      <article class="article">
-        <div class="col_33">
-          <h2>Recent Publications</h2>
-          <p><a href="http://www.atlasobscura.com/articles/here-be-fraud-a-map-of-the-worlds-best-cheats-fakes-and-flatout-lies"><b>Atlas Obscura:</b> The Map of the World's Best Cheats, Fakes, and Flat-Out Lies</a></p>
-          <p><a href="https://commonhealth.wbur.org/2015/11/flu-vaccine-no-excuses"><b>CommonHealth:</b> Sorry, Intriguing Studies Are No Excuse To Skip The Flu Shot This Year</a></p>
-          <p><a href="http://www.pbs.org/wgbh/nova/next/tech/automation-and-the-internet-of-things/"><b>NOVA Next:</b> To Automate Everything, Solve These Three Challenges</a></p>
-          <p><a href="http://abruzek.github.io/full.html">More</a></p>
-        </div>
-        <div class="col_33">
-          <h2>Radio</h2>
-          <p><a href="https://radioboston.wbur.org/author/abruzek"><b>WBUR:</b> Radio Boston</a></p>
-          <p><a href="http://www.npr.org/blogs/health/2014/12/03/368213774/don-t-let-technoference-ruin-your-love-life"><b>NPR:</b> Don't Let Technoference Ruin Your Love Life</a></p>
-          <p><a href="http://www.newsworks.org/index.php/thepulse/item/81086-on-a-cheese-rind-war-and-peace"><b>WHYY:</b> On A Cheese Rind, War And Peace</a></p>
-          <p><a href="http://abruzek.github.io/full.html">More</a></p>
-        </div>
-        <div class="col_33">
-          <h2>Video</h2>
-          <p><a href="http://forum-network.org/"><b>WGBH:</b> Forum Network</a></p>
-          </div>
-      </article>
-      
-    </div>
-    
-    <footer class="footer">
-      <div class="copyright"></div>
-      <nav class="menu_bottom">
-        <ul>
-        </ul>
-      </nav>
-    </footer>
-    
-  </div>
+	<aside id="sidebar">
+		<h2>Video</h2>
+		<p><a href="http://forum-network.org/"><b>WGBH:</b> Forum Network</a></p>
+	</aside>
+
+  <footer>
+		<h4>Footer</h4>
+		<p>Footer text</p>
+  </footer>
+
+</div>
 </body>
 </html>
