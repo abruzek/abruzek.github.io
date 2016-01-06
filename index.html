@@ -8,21 +8,20 @@
 
 body {
   background:#fff;
-  font-family:arial, sans-serif;
-  color:#565656;
+  font-family: georgia; arial;
+  color:#000;
 }
 
-a { color:#565656; }
-a:hover { color:#565656; text-decoration:underline; }
-a:visited { color:#727272; text-decoration:underline;}
-a:visited:hover { text-decoration:underline;}
+a { color:#000; text-decoration:none; }
+a:hover { color:#000; text-decoration:none; border-bottom: 3px solid}
+a:visited { color:#000; text-decoration:none;}
 
 ul li, ol li {
   padding:0 0 0.4em 0;
 }
 
 .container {
-  max-width:1300px;
+  max-width:1200px;
   margin:0 auto;
 }
 
@@ -67,6 +66,7 @@ ul li, ol li {
   margin:0 0 2em 0;
   padding:0 0 1em 2%;
 }
+
 .hero .col_66 {
   border-right:1px solid #cecece;
   margin-right:1%;
@@ -156,10 +156,9 @@ h1 {
 
 <body>
   <div class="container">
-    
-    <header class="header clearfix">
-      <div class="logo"></div>
-
+  
+  <header class="header">
+    <div class="logo"></div>
       <nav class="menu_main">
         <ul>
         </ul>
@@ -167,7 +166,8 @@ h1 {
     </header>
 
     <div class="info">
-      <article class="hero clearfix">
+      
+      <article class="hero">
         <div class="col_100">
           <h1>Alison Bruzek</h1>
           <p>is a freelance science writer & radio producer in Boston.</p>
@@ -176,7 +176,7 @@ h1 {
           </div>
       </article>
 
-      <article class="article clearfix">
+      <article class="article">
         <div class="col_33">
           <h2>Recent Publications</h2>
           <p><a href="http://www.atlasobscura.com/articles/here-be-fraud-a-map-of-the-worlds-best-cheats-fakes-and-flatout-lies"><b>Atlas Obscura:</b> The Map of the World's Best Cheats, Fakes, and Flat-Out Lies</a></p>
@@ -195,17 +195,12 @@ h1 {
           <h2>Video</h2>
           <p><a href="http://forum-network.org/"><b>WGBH:</b> Forum Network</a></p>
           </div>
-          
-      <div class="clearfix"></div>
-      
-      <h1>“Simpliste” in use</h1>
-      
       </article>
+      
     </div>
     
-    <footer class="footer clearfix">
+    <footer class="footer">
       <div class="copyright"></div>
-
       <nav class="menu_bottom">
         <ul>
         </ul>
