@@ -1,58 +1,311 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Alison Bruzek</title>
-
-<style type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="favicon.ico" rel="shortcut icon">
+  /* Skin "Simple swiss" by Renat Rafikov */
 body {
-background-image: url("http://tinypic.com/r/2njcz4/8");
-background-color: #FFF;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 0.9em;
-color: #2E3236;
+  background:#fff220;
+  font-family:arial, sans-serif;
+  color:#565656;
 }
 
-a:link, a:visited, a:active {
-  color: #2E3236;
+a { color:#565656; }
+a:hover { color:#565656; text-decoration:none; }
+a:visited { color:#727272; text-decoration:line-through;}
+a:visited:hover { text-decoration:underline;}
+
+ul li, ol li {
+  padding:0 0 0.4em 0;
+}
+
+
+.container {
+  max-width:1300px;
+  margin:0 auto;
+}
+
+.header {
+  margin:1em 1% 0 1%;
+  padding:2em 2% 1em 2%;
+  background:#fff;
+}
+
+.logo {
+  float:left;
+  display:inline-block;
+  font-size:18px;
+  color:#383838;
+}
+
+.menu_main {
+  width:50%;
+  float:right;
+  text-align:right;
+  margin:0.2em 0 0 0;
+}
+
+.menu_main li {
+  display:inline-block;
+  margin:0 0 0 7px;
+}
+
+.menu_main li.active,
+.menu_main li.active a {
+  color:#565656;
   text-decoration:none;
-  border-bottom: 3px solid #537DD5;
-  padding-bottom:-5px;
+  cursor:default;
 }
 
-a:hover {
-  color: #2E3236;
-  border-bottom: 3px solid #2E3236;
-  padding-bottom:-5px;
-  cursor: default;
+.info {
+  margin:0 1%;
+}
+
+.hero {
+  background:#fff;
+  margin:0 0 2em 0;
+  padding:0 0 1em 2%;
+}
+.hero .col_66 {
+  border-right:1px solid #cecece;
+  margin-right:1%;
+  padding-right:1%;
+}
+
+.article {
+  background:#fff;
+  padding:1.5em 0 2em 2%;
+}
+
+.footer {
+  padding:1em 2% 2em 2%;
+  color:#565656;
+  margin:0 1%;
+}
+
+.copyright {
+  width:49%;
+  float:left;
+}
+
+.menu_bottom {
+  width:50%;
+  float:right;
+  text-align:right;
+  margin:0;
+  padding:0;
+  color:#565656;
+}
+.menu_bottom li {
+  display:inline-block;
+  margin:0 0 0 7px;
+}
+.menu_bottom a {
+  color:#565656;
+}
+.menu_bottom li.active,
+.menu_bottom li.active a {
+  color:#565656;
+  text-decoration:none;
+  cursor:default;
+}
+
+
+.hero h1 {
+  font-size:18px;
+  color:#565656;
+}
+
+h1, h2 {
+  font-weight:normal;
+  font-size:17px;
+}
+
+h3, h4, h5, h6 {
+  font-weight:bold;
+  color:#737373;
 }
 
 h1 {
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	font-size: 1.5em;
-	color: #2E3236;
+  font-size:22px;
 }
 
-#container {
-  border-left: 0px solid #537DD5;
-  overflow: auto;
-	width: 60%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 100px;
-  padding-bottom: 15px;
+.article .col_33 h2:first-child,
+.article .col_50 h2:first-child,
+.article .col_66 h2:first-child {
+  border-bottom:1px solid #cecece;
+  padding: 0 0 0.5em;
 }
 
-</style>
+.form label {
+  display:inline-block;
+  padding:0 0 4px 0;
+}
 
+a.button,
+.button {
+  border:0;
+  text-align:center; 
+  text-decoration:none;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+  -webkit-box-shadow: #969696 0px 2px 6px;
+  -moz-box-shadow: #969696 0px 2px 6px;
+  box-shadow: #969696 0px 2px 6px;  
+  background:#565656;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#8D8D8D), to(#565656));
+  background: -webkit-linear-gradient(#8D8D8D, #565656);
+  background: -moz-linear-gradient(#8D8D8D, #565656);
+  background: -ms-linear-gradient(#8D8D8D, #565656);
+  background: -o-linear-gradient(#8D8D8D, #565656);
+  background: linear-gradient(#8D8D8D, #565656);
+  color:#d3d3d3;
+  padding:12px 20px;
+  font-family:verdana, sans-serif;
+  display:inline-block;
+}
+a.button:hover,
+.button:hover {
+  color:#fff;  
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#565656), to(#8D8D8D));
+  background: -webkit-linear-gradient(#565656, #8D8D8D);
+  background: -moz-linear-gradient(#565656, #8D8D8D);
+  background: -ms-linear-gradient(#565656, #8D8D8D);
+  background: -o-linear-gradient(#565656, #8D8D8D);
+  background: linear-gradient(#565656, #8D8D8D);
+  -webkit-box-shadow: #898989 0px 2px 4px;
+  -moz-box-shadow: #898989 0px 2px 4px;
+  box-shadow: #898989 0px 2px 4px;  
+}
+a.button:active,
+.button:active {
+  color:#323232;
+  text-shadow:0px 1px 1px #bdbdbd;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#565656), to(#8D8D8D));
+  background: -webkit-linear-gradient(#565656, #8D8D8D);
+  background: -moz-linear-gradient(#565656, #8D8D8D);
+  background: -ms-linear-gradient(#565656, #8D8D8D);
+  background: -o-linear-gradient(#565656, #8D8D8D);
+  background: linear-gradient(#565656, #8D8D8D);
+  -webkit-box-shadow: #323232 0px -2px 2px inset;
+  -moz-box-shadow: #323232 0px -2px 2px inset;
+  box-shadow: #323232 0px -2px 2px inset;  
+}
+
+.table {
+  width:100%;
+}
+.table th {
+  padding:5px 7px;
+  font-weight:normal;
+  text-align:left;
+  font-size:1.2em;
+}
+.table td {
+  padding:5px 7px;
+}
+.table tr {
+  border-bottom:1px solid #ddd;
+}
+.table tr:last-child {
+  border:0;
+}
+
+.warning {
+  border:1px solid #ec252e;
+  color:#fff;
+  padding:8px 14px;
+  background:#eb4161;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+}
+.success {
+  border:1px solid #399f16;
+  color:#fff;
+  background:#12d878;
+  padding:8px 14px;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+}
+.message {
+  border:1px solid #efe65d;
+  color:#9a9855;
+  background:#fffbc0;
+  padding:8px 14px;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+}
+
+
+@media only screen and (max-width:480px) { /* Smartphone custom styles */
+  .hero .col_66 {
+    border-right:0;
+    margin-right:2%;
+  }
+  .header {
+    padding: 1em 2% 0;
+    margin: 3px 1% 0;
+  }
+  .hero {
+      margin: 0 0 6px;
+  }
+}
+
+@media only screen and (max-width:768px) { /* Tablet custom styles */
+  .hero .col_66 {
+    border-right:0;
+    margin-right:2%;
+  }
+}
+  <title>Alison Bruzek</title>  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
 
-<div id="container">
-  <b>Alison Bruzek</b> is a freelance science writer & radio producer in Boston.<br /><br />
-  I'm a fill-in producer for WBUR and have written for <i>NPR</i>, <i>The Atlantic</i> and <i>The Boston Globe</i>, among others.<br />
-  I'm also on <a href="http://www.twitter.com/voteforali">Twitter</a> and I co-write an affectionately inane <a href="http://www.tinyletter.com/wowcrazyshit">newsletter</a>. Rarely, I <a href="http://www.theraptorlab.com/">blog.</a><br /><br />
-  [Archived work <a href="http://abruzek.github.io/full.html">here</a>.]
-</div>
-  
+<body>
+  <div class="container">
+
+    <div class="info">
+      <article class="hero clearfix">
+        <div class="col_100">
+          <h1>Alison Bruzek</h1>
+          <p>is a freelance science writer & radio producer in Boston.</p>
+          <p>I'm a fill-in producer at WBUR and have written for <i>NPR</i>, <i>The Atlantic</i> and <i>The Boston Globe</i>, among others.</p>
+          <p>I'm also on <a href="http://www.twitter.com/voteforali">Twitter</a> and I co-write an affectionately inane <a href="http://www.tinyletter.com/wowcrazyshit">newsletter</a>. Rarely, I <a href="http://www.theraptorlab.com/">blog.</a></p>
+          </div>
+      </article>
+
+
+      <article class="article clearfix">
+        <div class="col_33">
+          <h2>Recent Publications</h2>
+          <p><a href="http://www.atlasobscura.com/articles/here-be-fraud-a-map-of-the-worlds-best-cheats-fakes-and-flatout-lies"><b>Atlas Obscura:</b> The Map of the World's Best Cheats, Fakes, and Flat-Out Lies</a></p>
+          <p><a href="https://commonhealth.wbur.org/2015/11/flu-vaccine-no-excuses"><b>CommonHealth:</b> Sorry, Intriguing Studies Are No Excuse To Skip The Flu Shot This Year</a></p>
+          <p><a href="http://www.pbs.org/wgbh/nova/next/tech/automation-and-the-internet-of-things/"><b>NOVA Next:</b> To Automate Everything, Solve These Three Challenges</a></p>
+          <p><a href="http://abruzek.github.io/full.html">More</a></p>
+        </div>
+
+        <div class="col_33">
+          <h2>Radio</h2>
+          <p><a href="https://radioboston.wbur.org/author/abruzek"><b>WBUR:</b> Radio Boston</a></p>
+          <p><a href="http://www.npr.org/blogs/health/2014/12/03/368213774/don-t-let-technoference-ruin-your-love-life"><b>NPR:</b> Don't Let Technoference Ruin Your Love Life</a></p>
+          <p><a href="http://www.newsworks.org/index.php/thepulse/item/81086-on-a-cheese-rind-war-and-peace"><b>WHYY:</b> On A Cheese Rind, War And Peace</a></p>
+          <p><a href="http://abruzek.github.io/full.html">More</a></p>
+        </div>
+
+        <div class="col_33">
+          <h2>Video</h2>
+          <p><a href="http://forum-network.org/"><b>WGBH:</b> Forum Network</a></p>
+          </div>
+
+<footer class="footer clearfix">
+      <div class="copyright">Keep it simplest</div>
+    </footer>
+
+  </div>
 </body>
 </html>
